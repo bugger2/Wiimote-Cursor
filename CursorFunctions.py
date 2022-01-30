@@ -3,12 +3,12 @@
 # I have managed to map the home button to the accelerometer - simply hold it and values will appear!
 
 # Coded by The Raspberry Pi Guy. Work based on some of Matt Hawkins's!
-import cwiid, time, turtle
+import cwiid, time, t
 
 button_delay = 0.1
 color = 1
 time.sleep(1)
-
+t = turtle.Turtle()
 # This code attempts to connect to your Wiimote and if it fails the program quits
 try:
   wii=cwiid.Wiimote()
@@ -24,35 +24,35 @@ while True:
   while (2 == 2):
     if (color == 1 & cwiid.BTN_A != True):
       colorRGB = 0,0,0
-      turtle.fillcolor(colorRGB)
+      t.fillcolor(colorRGB)
       circle(circle_width)  
     if (color == 2 & cwiid.BTN_A != True):
       colorRGB = 255,255,255
-      turtle.fillcolor(colorRGB)
+      t.fillcolor(colorRGB)
       circle(circle_width)
     if (color == 3 & cwiid.BTN_A != True):
       colorRGB = (0,0,255)
-      turtle.fillcolor(colorRGB)
+      t.fillcolor(colorRGB)
       circle(circle_width)
     if (color == 4 & cwiid.BTN_A != True):
       colorRGB = (128,0,128)
-      turtle.fillcolor(colorRGB)
+      t.fillcolor(colorRGB)
       circle(circle_width)
     if (color == 5 & cwiid.BTN_A != True):
       colorRGB = (255,192,203)
-      turtle.fillcolor(colorRGB)
+      t.fillcolor(colorRGB)
       circle(circle_width)
     if (color == 6 & cwiid.BTN_A != True):
       colorRGB = (255,0,0)
-      turtle.fillcolor(colorRGB)
+      t.fillcolor(colorRGB)
       circle(circle_width)
     if (color == 7 & cwiid.BTN_A != True):
       colorRGB = (255,255,0)
-      turtle.fillcolor(colorRGB)
+      t.fillcolor(colorRGB)
       circle(circle_width)
     if (color == 8 & cwiid.BTN_A != True):
       colorRGB = (0,255,0)
-      turtle.fillcolor(colorRGB)
+      t.fillcolor(colorRGB)
       circle(circle_width)
     if (color < 1 | color > 8):
       color = 1
@@ -70,7 +70,7 @@ while True:
     time.sleep(button_delay)
 
   if (buttons & cwiid.BTN_A):
-    turtle.fillcolor(colorRGB)
+    t.fillcolor(colorRGB)
     circle(circle_width)
     time.sleep(button_delay)
 
