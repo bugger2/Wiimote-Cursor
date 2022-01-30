@@ -15,7 +15,7 @@ time.sleep(1)
 try:
   wii=cwiid.Wiimote()
 
-t = turtle.Turtle()
+t=turtle.Turtle()
 circle_width = 5
 t.begin_fill()
 wii.rpt_mode = cwiid.RPT_BTN
