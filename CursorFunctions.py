@@ -3,7 +3,9 @@
 # I have managed to map the home button to the accelerometer - simply hold it and values will appear!
 
 # Coded by The Raspberry Pi Guy. Work based on some of Matt Hawkins's!
-import cwiid, time, turtle
+import cwiid
+import time
+import turtle
 
 button_delay = 0.1
 color = 1
