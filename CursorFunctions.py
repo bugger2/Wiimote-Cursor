@@ -12,7 +12,8 @@ time.sleep(1)
 # This code attempts to connect to your Wiimote and if it fails the program quits
 try:
   wii=cwiid.Wiimote()
-  
+except:
+  exit()
 circle_width = 5
 t.begin_fill()
 wii.rpt_mode = cwiid.RPT_BTN
