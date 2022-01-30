@@ -3,84 +3,60 @@
 # I have managed to map the home button to the accelerometer - simply hold it and values will appear!
 
 # Coded by The Raspberry Pi Guy. Work based on some of Matt Hawkins's!
-import cwiid, time, js2py
+import cwiid, time, turtle
 
 button_delay = 0.1
 color = 1
-print 'Please press buttons 1 + 2 on your Wiimote now ...'
 time.sleep(1)
 
 # This code attempts to connect to your Wiimote and if it fails the program quits
 try:
   wii=cwiid.Wiimote()
 
-time.sleep(3)
-
+t = turtle.Turtle()
+circle_width = 5
+t.begin_fill()
 wii.rpt_mode = cwiid.RPT_BTN
 
 while True:
   
   while (2 == 2):
-    if (color == 1 & cwiid.BTN_B != True):
-      js2py.eval_js(
-        fill(black);
-        stroke(black);
-        clear()
-        ellipse(cursorX, cursorY, 5, 5);
-      )
+    goto(200, 100)
+    if (color == 1 & cwiid.BTN_A != True):
+      colorRGB = 0,0,0
+      t.fillcolor(colorRGB)
+      circle(circle_width)  
     else if (color == 2):
-      js2py.eval_js(
-        fill(white);
-        stroke(white);
-        clear()
-        ellipse(cursorX, cursorY, 5, 5);
-      )
+      colorRGB = 255,255,255
+      t.fillcolor(colorRGB)
+      circle(circle_width)
     else if (color == 3):
-      js2py.eval_js(
-        fill(blue);
-        stroke(blue);
-        clear()
-        ellipse(cursorX, cursorY, 5, 5);
-      )
+      colorRGB = (0,0,255)
+      t.fillcolor(colorRGB)
+      circle(circle_width)
     else if (color == 4):
-      js2py.eval_js(
-        fill(purple);
-        stroke(purple);
-        clear()
-        ellipse(cursorX, cursorY, 5, 5);
-      )
+      colorRGB = (128,0,128)
+      t.fillcolor(colorRGB)
+      circle(circle_width)
     else if (color == 5):
-      js2py.eval_js(
-        fill(pink);
-        stroke(pink);
-        clear()
-        ellipse(cursorX, cursorY, 5, 5);
-      )
+      colorRGB = (255,192,203)
+      t.fillcolor(colorRGB)
+      circle(circle_width)
     else if (color == 6):
-      js2py.eval_js(
-        fill(red);
-        stroke(red);
-        clear()
-        ellipse(cursorX, cursorY, 5, 5);
-      )
+      colorRGB = (255,0,0)
+      t.fillcolor(colorRGB)
+      circle(circle_width)
     else if (color == 7):
-      js2py.eval_js(
-        fill(yellow);
-        stroke(yellow);
-        clear()
-        ellipse(cursorX, cursorY, 5, 5);
-      )
+      colorRGB = (255,255,0)
+      t.fillcolor(colorRGB)
+      circle(circle_width)
     else if (color == 8):
-      js2py.eval_js(
-        fill(green);
-        stroke(green);
-        clear()
-        ellipse(cursorX, cursorY, 5, 5);
-      )
-    else if (color == 9):
-      color = 1
+      colorRGB = (0,255,0)
+      t.fillcolor(colorRGB)
+      circle(circle_width)
     else:
       color = 1
+    clear()
 
   buttons = wii.state['buttons']
 
@@ -94,9 +70,8 @@ while True:
     time.sleep(button_delay)
 
   if (buttons & cwiid.BTN_A):
-    js2py.eval_js(
-      ellipse(cursorX, cursorY, 5, 5)
-tyg
+    t.fillcolor(colorRGB)
+    circle(circle_width)
     time.sleep(button_delay)
 
   if (buttons & cwiid.BTN_B):
