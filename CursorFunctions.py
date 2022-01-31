@@ -55,7 +55,7 @@ while True:
       circle(circle_width)
     if (color < 1 | color > 8):
       color = 1
-    clear()
+    turtle.clear()
 
   buttons = wii.state['buttons']
 
