@@ -17,7 +17,7 @@ except:
 circle_width = 5
 turtle.begin_fill()
 wii.rpt_mode = cwiid.RPT_BTN
-goto(200,100)
+turtle.goto(200,100)
 while True:
   
   while (2 == 2):
