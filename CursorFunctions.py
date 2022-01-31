@@ -6,6 +6,7 @@
 import cwiid, time, turtle, matplotlib
 matplotlib.use('Agg')
 button_delay = 0.1
+wm = cwiid.Wiimote()
 color = 1
 time.sleep(1)
 turtle.speed(0)
