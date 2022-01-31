@@ -10,8 +10,8 @@ wm = cwiid.Wiimote()
 color = 1
 time.sleep(1)
 turtle.speed(0)
-roll=(wm.state['acc'][0]-125)
-pitch=(wm.state['acc'][1]-121)
+#roll=(wm.state['acc'][0]-125)
+#pitch=(wm.state['acc'][1]-121)
 # This code attempts to connect to your Wiimote and if it fails the program quits
 try:
   wii=cwiid.Wiimote()
@@ -83,20 +83,20 @@ while True:
     turtle.pendown()
     circle(circle_width)
     time.sleep(button_delay)
-    
+    print(wm.state)
   if (buttons & cwiid.BTN_B):
-    if (roll < -5):
-      turtle.seth(0)
-      turtle.back(2)
-    if (roll > 5):
-      turtle.seth(0)
-      turtle.forward(2)
-    if (pitch > 5):
-      turtle.seth(90)
-      turtle.forward(2)
-    if (pitch < -5):
-      turtle.seth(90)
-      turtle.back(2)
+    #if (roll < -5):
+      #turtle.seth(0)
+      #turtle.back(2)
+   # if (roll > 5):
+   #   turtle.seth(0)
+  #    turtle.forward(2)
+ #   if (pitch > 5):
+  #    turtle.seth(90)
+ #     turtle.forward(2)
+  #  if (pitch < -5):
+  #    turtle.seth(90)
+  #    turtle.back(2)
     time.sleep(button_delay)
 
   if (buttons & cwiid.BTN_HOME):
