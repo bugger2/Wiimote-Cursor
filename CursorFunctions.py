@@ -10,8 +10,8 @@ wm = cwiid.Wiimote()
 color = 1
 time.sleep(1)
 turtle.speed(0)
-roll=(wm.state[accelerometer][0]-120)
-pitch=(wm.state[accelerometer][1]-121)
+roll=(wm.state[acc][0]-125)
+pitch=(wm.state[acc][1]-121)
 # This code attempts to connect to your Wiimote and if it fails the program quits
 try:
   wii=cwiid.Wiimote()
