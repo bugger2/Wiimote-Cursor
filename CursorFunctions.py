@@ -9,7 +9,7 @@ button_delay = 0.1
 color = 1
 time.sleep(1)
 turtle.speed(0)
-
+colorRGB = 255,165,0
 # This code attempts to connect to your Wiimote and if it fails the program quits
 try:
   wii=cwiid.Wiimote()
