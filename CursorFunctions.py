@@ -23,6 +23,15 @@ wii.rpt_mode = cwiid.RPT_BTN
 turtle.goto(200,100)
 while True:
   buttons = wii.state['buttons']
+  
+  if (buttons - cwiid.BTN_PLUS - cwiid.BTN_MINUS == 0):
+    print '\nClosing connection ...'
+    # NOTE: This is how you RUMBLE the Wiimote
+    wii.rumble = 1
+    time.sleep(1)
+    wii.rumble = 0
+    exit(wii)
+    
   if (color == 1 & cwiid.BTN_A != True):
     turtle.pendown()
     colorRGB = 255,165,0
