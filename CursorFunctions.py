@@ -16,8 +16,8 @@ try:
 except:
   quit()
 circle_width = 5
-roll=(wii.state['acc'][0])
-pitch=(wii.state['acc'][1])
+#roll=(wii.state['acc'][0])
+#pitch=(wii.state['acc'][1])
 turtle.begin_fill()
 wii.rpt_mode = cwiid.RPT_BTN
 turtle.goto(150,150)
@@ -90,20 +90,20 @@ while True:
     turtle.pendown()
     circle(circle_width)
     time.sleep(button_delay)
-   # print(wii.state)
-  if (buttons & cwiid.BTN_B):
-    if (roll < -5):
-      turtle.seth(0)
-      turtle.back(2)
-    if (roll > 5):
-      turtle.seth(0)
-      turtle.forward(2)
-    if (pitch > 5):
-      turtle.seth(90)
-      turtle.forward(2)
-    if (pitch < -5):
-      turtle.seth(90)
-      turtle.back(2)
+    print(wii.state)
+  #if (buttons & cwiid.BTN_B):
+   # if (roll < -5):
+    #  turtle.seth(0)
+     # turtle.back(2)
+#    if (roll > 5):
+ #     turtle.seth(0)
+  #    turtle.forward(2)
+   # if (pitch > 5):
+    #  turtle.seth(90)
+     # turtle.forward(2)
+#    if (pitch < -5):
+ #     turtle.seth(90)
+  #    turtle.back(2)
     time.sleep(button_delay)
 
   if (buttons & cwiid.BTN_HOME):
