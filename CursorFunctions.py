@@ -15,9 +15,8 @@ turtle.speed(0)
 # This code attempts to connect to your Wiimote and if it fails the program quits
 try:
   wii=cwiid.Wiimote()
-  time.sleep(3)
 except:
-  exit()
+  quit()
 circle_width = 5
 turtle.begin_fill()
 wii.rpt_mode = cwiid.RPT_BTN
