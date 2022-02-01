@@ -9,7 +9,6 @@ button_delay = 0.1
 color = 1
 time.sleep(1)
 turtle.speed(0)
-colorRGB = 255,165,0
 # This code attempts to connect to your Wiimote and if it fails the program quits
 try:
   wii=cwiid.Wiimote()
@@ -34,43 +33,35 @@ while True:
     
   if (color == 1 & cwiid.BTN_A != True):
     turtle.pendown()
-    colorRGB = 255,165,0
-    turtle.fillcolor(colorRGB)
+    turtle.fillcolor(white)
     circle(circle_width)  
   if (color == 2 & cwiid.BTN_A != True):
     turtle.pendown()
-    colorRGB = 255,255,255
-    turtle.fillcolor(colorRGB)
+    turtle.fillcolor(purple)
     circle(circle_width)
   if (color == 3 & cwiid.BTN_A != True):
     turtle.pendown()
-    colorRGB = (0,0,255)
-    turtle.fillcolor(colorRGB)
+    turtle.fillcolor(blue)
     circle(circle_width)
   if (color == 4 & cwiid.BTN_A != True):
     turtle.pendown()
-    colorRGB = (128,0,128)
-    turtle.fillcolor(colorRGB)
+    turtle.fillcolor(red)
     circle(circle_width)
   if (color == 5 & cwiid.BTN_A != True):
     turtle.pendown()
-    colorRGB = (255,192,203)
-    turtle.fillcolor(colorRGB)
+    turtle.fillcolor(green)
     circle(circle_width)
   if (color == 6 & cwiid.BTN_A != True):
     turtle.pendown()
-    colorRGB = (255,0,0)
-    turtle.fillcolor(colorRGB)
+    turtle.fillcolor(yellow)
     circle(circle_width)
   if (color == 7 & cwiid.BTN_A != True):
     turtle.pendown()
-    colorRGB = (255,255,0)
-    turtle.fillcolor(colorRGB)
+    turtle.fillcolor(orange)
     circle(circle_width)
   if (color == 8 & cwiid.BTN_A != True):
     turtle.pendown()
-    colorRGB = (0,255,0)
-    turtle.fillcolor(colorRGB)
+    turtle.fillcolor(pink)
     circle(circle_width)
   if (color < 1 or color > 8):
     color = 1
@@ -86,7 +77,7 @@ while True:
     time.sleep(button_delay)
 
   if (buttons & cwiid.BTN_A):
-    turtle.fillcolor(colorRGB)
+    turtle.fillcolor(white)
     turtle.pendown()
     circle(circle_width)
     time.sleep(button_delay)
