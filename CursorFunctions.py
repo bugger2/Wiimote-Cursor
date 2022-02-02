@@ -34,35 +34,35 @@ while True:
   if (color == 1 and cwiid.BTN_A != True):
     turtle.pendown()
     turtle.fillcolor('#FFFFFF')
-    circle(circle_width)  
+    turtle.circle(circle_width)  
   if (color == 2 and cwiid.BTN_A != True):
     turtle.pendown()
     turtle.fillcolor('#A020F0')
-    circle(circle_width)
+    turtle.circle(circle_width)
   if (color == 3 and cwiid.BTN_A != True):
     turtle.pendown()
     turtle.fillcolor('#0000FF')
-    circle(circle_width)
+    turtle.circle(circle_width)
   if (color == 4 and cwiid.BTN_A != True):
     turtle.pendown()
     turtle.fillcolor('#FF0000')
-    circle(circle_width)
+    turtle.circle(circle_width)
   if (color == 5 and cwiid.BTN_A != True):
     turtle.pendown()
     turtle.fillcolor('#00FF00')
-    circle(circle_width)
+    turtle.circle(circle_width)
   if (color == 6 and cwiid.BTN_A != True):
     turtle.pendown()
     turtle.fillcolor('#FFFF00')
-    circle(circle_width)
+    turtle.circle(circle_width)
   if (color == 7 and cwiid.BTN_A != True):
     turtle.pendown()
     turtle.fillcolor('#FFA500')
-    circle(circle_width)
+    turtle.circle(circle_width)
   if (color == 8 and cwiid.BTN_A != True):
     turtle.pendown()
     turtle.fillcolor('#FFC0CB')
-    circle(circle_width)
+    turtle.circle(circle_width)
   if (color < 1 or color > 8):
     color = 1
   turtle.clear()
@@ -79,7 +79,7 @@ while True:
   if (buttons & cwiid.BTN_A):
     turtle.fillcolor(white)
     turtle.pendown()
-    circle(circle_width)
+    turtle.circle(circle_width)
     time.sleep(button_delay)
     print(wii.state)
   #if (buttons & cwiid.BTN_B):
