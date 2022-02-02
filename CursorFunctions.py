@@ -80,11 +80,16 @@ while True:
     time.sleep(button_delay)
 
   if (buttons & cwiid.BTN_A):
+    wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
     turtle.fillcolor('#FFFFFF')
     turtle.pendown()
     turtle.circle(circle_width)
+    check = 0
+    while check == 0:
+      print(wii.state['acc'])
+      time.sleep(0.01)
+      check = (buttons & cwiid.BTN_HOME)
     time.sleep(button_delay)
-    print(wii.state['acc'])
   #if (buttons & cwiid.BTN_B):
    # if (roll < -5):
     #  turtle.seth(0)
