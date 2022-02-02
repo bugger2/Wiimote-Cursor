@@ -8,7 +8,7 @@ matplotlib.use('Agg')
 button_delay = 0.1
 color = 1
 time.sleep(1)
-turtle.speed(0)
+
 # This code attempts to connect to your Wiimote and if it fails the program quits
 try:
   wii=cwiid.Wiimote()
@@ -17,10 +17,18 @@ except:
   quit()
 circle_width = 5
 print("Connection established. Feel free to draw.")
-turtle.begin_fill()
+
 wii.rpt_mode = cwiid.RPT_BTN
+
+#All turtle preamble
+bg = turtle.Screen()
+bg.bgcolor("black")
+bg.title("Good Morning!")
+turtle.speed(0)
+turtle.begin_fill()
 turtle.goto(200,200)
 turtle.hideturtle()
+
 while True:
   buttons = wii.state['buttons']
   
@@ -78,19 +86,8 @@ while True:
     time.sleep(button_delay)
 
   if (buttons & cwiid.BTN_A):
-    
-    #wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
-    #turtle.fillcolor('#FFFFFF')
-    ##roll=(wii.state['acc'][0])
-    #pitch=(wii.state['acc'][1])
     turtle.pendown()
     turtle.circle(circle_width)
-    #check = 0
-    ##while check == 0:
-      #print(wii.state['acc'][0]-120)
-#      print(wii.state['acc'][1]-125)
- #     time.sleep(0.1)
-  #    check = (buttons & cwiid.BTN_HOME)
     time.sleep(button_delay)
   if (buttons & cwiid.BTN_B):
     wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
@@ -116,5 +113,6 @@ while True:
 
   if (buttons & cwiid.BTN_HOME):
     wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
-    turtle.goto(150,150)
+    turtle.goto(200,200)
     time.sleep(button_delay)
+turtle.endfill()
