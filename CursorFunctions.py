@@ -81,7 +81,7 @@ while True:
     turtle.pendown()
     turtle.circle(circle_width)
     time.sleep(button_delay)
-    print(wii.state)
+    print(wii.state['acc'])
   #if (buttons & cwiid.BTN_B):
    # if (roll < -5):
     #  turtle.seth(0)
