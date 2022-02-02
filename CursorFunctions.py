@@ -35,33 +35,33 @@ while True:
     turtle.pendown()
     turtle.fillcolor('#FFFFFF')
     circle(circle_width)  
-  if (color == 2 & cwiid.BTN_A != True):
+  if (color == 2 and cwiid.BTN_A != True):
     turtle.pendown()
-    turtle.fillcolor(#A020F0)
+    turtle.fillcolor('#A020F0')
     circle(circle_width)
-  if (color == 3 & cwiid.BTN_A != True):
+  if (color == 3 and cwiid.BTN_A != True):
     turtle.pendown()
-    turtle.fillcolor(blue)
+    turtle.fillcolor('#0000FF')
     circle(circle_width)
-  if (color == 4 & cwiid.BTN_A != True):
+  if (color == 4 and cwiid.BTN_A != True):
     turtle.pendown()
-    turtle.fillcolor(red)
+    turtle.fillcolor('#FF0000')
     circle(circle_width)
-  if (color == 5 & cwiid.BTN_A != True):
+  if (color == 5 and cwiid.BTN_A != True):
     turtle.pendown()
-    turtle.fillcolor(green)
+    turtle.fillcolor('#00FF00')
     circle(circle_width)
-  if (color == 6 & cwiid.BTN_A != True):
+  if (color == 6 and cwiid.BTN_A != True):
     turtle.pendown()
-    turtle.fillcolor(yellow)
+    turtle.fillcolor('#FFFF00')
     circle(circle_width)
-  if (color == 7 & cwiid.BTN_A != True):
+  if (color == 7 and cwiid.BTN_A != True):
     turtle.pendown()
-    turtle.fillcolor(orange)
+    turtle.fillcolor('#FFA500')
     circle(circle_width)
-  if (color == 8 & cwiid.BTN_A != True):
+  if (color == 8 and cwiid.BTN_A != True):
     turtle.pendown()
-    turtle.fillcolor(pink)
+    turtle.fillcolor('#FFC0CB')
     circle(circle_width)
   if (color < 1 or color > 8):
     color = 1
