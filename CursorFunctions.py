@@ -17,8 +17,6 @@ except:
   quit()
 circle_width = 5
 print("Connection established. Feel free to draw.")
-#roll=(wii.state['acc'][0])
-#pitch=(wii.state['acc'][1])
 turtle.begin_fill()
 wii.rpt_mode = cwiid.RPT_BTN
 turtle.goto(150,150)
@@ -80,30 +78,36 @@ while True:
     time.sleep(button_delay)
 
   if (buttons & cwiid.BTN_A):
+    
     wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
     turtle.fillcolor('#FFFFFF')
+    roll=(wii.state['acc'][0])
+    pitch=(wii.state['acc'][1])
     turtle.pendown()
     turtle.circle(circle_width)
     check = 0
     while check == 0:
-      print(wii.state['acc'])
-      time.sleep(0.01)
+      print(wii.state['acc'][0]-120)
+      print(wii.state['acc'][1]-123)
+      time.sleep(0.1)
       check = (buttons & cwiid.BTN_HOME)
     time.sleep(button_delay)
-  #if (buttons & cwiid.BTN_B):
-   # if (roll < -5):
-    #  turtle.seth(0)
-     # turtle.back(2)
-#    if (roll > 5):
- #     turtle.seth(0)
-  #    turtle.forward(2)
-   # if (pitch > 5):
-    #  turtle.seth(90)
-     # turtle.forward(2)
-#    if (pitch < -5):
- #     turtle.seth(90)
-  #    turtle.back(2)
-    time.sleep(button_delay)
+  if (buttons & cwiid.BTN_B):
+    wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
+    roll=(wii.state['acc'][0])
+    pitch=(wii.state['acc'][1])
+    if (roll < -5):
+      turtle.seth(0)
+      turtle.back(2)
+    if (roll > 5):
+      turtle.seth(0)
+      turtle.forward(2)
+    if (pitch > 5):
+      turtle.seth(90)
+      turtle.forward(2)
+    if (pitch < -5):
+      turtle.seth(90)
+      turtle.back(2)
 
   if (buttons & cwiid.BTN_HOME):
     wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
