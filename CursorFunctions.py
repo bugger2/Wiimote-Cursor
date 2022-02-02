@@ -33,7 +33,7 @@ while True:
     
   if (color == 1 & cwiid.BTN_A != True):
     turtle.pendown()
-    turtle.fillcolor(white)
+    turtle.fillcolor('white')
     circle(circle_width)  
   if (color == 2 & cwiid.BTN_A != True):
     turtle.pendown()
