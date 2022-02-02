@@ -13,13 +13,16 @@ turtle.speed(0)
 try:
   wii=cwiid.Wiimote()
 except:
+  print("Connection failed. Please try again.")
   quit()
 circle_width = 5
+print("Connection established. Feel free to draw.")
 #roll=(wii.state['acc'][0])
 #pitch=(wii.state['acc'][1])
 turtle.begin_fill()
 wii.rpt_mode = cwiid.RPT_BTN
 turtle.goto(150,150)
+turtle.begin_fill()
 while True:
   buttons = wii.state['buttons']
   
