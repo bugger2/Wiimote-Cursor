@@ -1,4 +1,5 @@
 sudo apt-get update
+export DISPLAY=:0
 sudo apt-get install --no-install-recommends bluetooth -y
 sudo apt-get install python-cwiid
 sudo apt-get install python3-matplotlib
