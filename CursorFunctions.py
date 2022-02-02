@@ -33,11 +33,11 @@ while True:
     
   if (color == 1 & cwiid.BTN_A != True):
     turtle.pendown()
-    turtle.fillcolor('white')
+    turtle.fillcolor(#FFFFFF)
     circle(circle_width)  
   if (color == 2 & cwiid.BTN_A != True):
     turtle.pendown()
-    turtle.fillcolor(purple)
+    turtle.fillcolor(#A020F0)
     circle(circle_width)
   if (color == 3 & cwiid.BTN_A != True):
     turtle.pendown()
