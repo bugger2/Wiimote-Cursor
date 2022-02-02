@@ -77,7 +77,7 @@ while True:
     time.sleep(button_delay)
 
   if (buttons & cwiid.BTN_A):
-    turtle.fillcolor(white)
+    turtle.fillcolor('#FFFFFF')
     turtle.pendown()
     turtle.circle(circle_width)
     time.sleep(button_delay)
