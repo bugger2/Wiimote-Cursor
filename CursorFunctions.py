@@ -120,10 +120,10 @@ while True:
       turtle.pencolor('#00FF00')
       turtle.circle(circle_width)
     if (color == 6 and buttons & cwiid.BTN_A):
-    turtle.pendown()
-    turtle.fillcolor('#FFFF00')
-    turtle.pencolor('#FFFF00')
-    turtle.circle(circle_width)
+      turtle.pendown()
+      turtle.fillcolor('#FFFF00')
+      turtle.pencolor('#FFFF00')
+      turtle.circle(circle_width)
     if (color == 7 and buttons & cwiid.BTN_A):
       turtle.pendown()
       turtle.fillcolor('#FFA500')
