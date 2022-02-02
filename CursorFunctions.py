@@ -31,9 +31,9 @@ while True:
     wii.rumble = 0
     exit(wii)
     
-  if (color == 1 & cwiid.BTN_A != True):
+  if (color == 1 and cwiid.BTN_A != True):
     turtle.pendown()
-    turtle.fillcolor(#FFFFFF)
+    turtle.fillcolor('#FFFFFF')
     circle(circle_width)  
   if (color == 2 & cwiid.BTN_A != True):
     turtle.pendown()
