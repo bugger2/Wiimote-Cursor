@@ -42,7 +42,7 @@ while True:
     
   if (buttons & cwiid.BTN_A != True):
     turtle.pendown()
-    turtle.beginfill()
+    turtle.begin_fill()
     turtle.fillcolor('#FFFFFF')
     turtle.pencolor('#FFFFFF')
     turtle.circle(circle_width)
