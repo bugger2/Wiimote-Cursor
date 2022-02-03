@@ -71,7 +71,7 @@ while True:
     time.sleep(button_delay)
 #BUTTON B CODE
   if (buttons & cwiid.BTN_B):
-    while (2 == 2)
+    while 2 == 2:
       
       turtle.pendown()
       turtle.begin_fill()
