@@ -32,7 +32,7 @@ turtle.hideturtle()
 while True:
   buttons = wii.state['buttons']
   
-  if (buttons - cwiid.BTN_PLUS - cwiid.BTN_MINUS == 0):
+  if (buttons and cwiid.BTN_PLUS and cwiid.BTN_MINUS == 0):
     print '\nClosing connection ...'
     # NOTE: This is how you RUMBLE the Wiimote
     wii.rumble = 1
