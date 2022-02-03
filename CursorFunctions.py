@@ -46,7 +46,7 @@ while True:
     turtle.fillcolor('#FFFFFF')
     turtle.pencolor('#FFFFFF')
     turtle.circle(circle_width)
-    turtle.endfill()
+    turtle.end_fill()
     turtle.clear()
 
   # The following code detects whether any of the Wiimotes buttons have been pressed and then prints a statement to the screen!
