@@ -28,6 +28,10 @@ turtle.speed(0)
 turtle.begin_fill()
 turtle.goto(200,200)
 turtle.hideturtle()
+turtle.pendown()
+turtle.begin_fill()
+turtle.pencolor('#FFFFFF')
+turtle.fillcolor('#FFFFFF')
 turtle.circle(circle_width)
 while True:
   buttons = wii.state['buttons']
@@ -67,7 +71,7 @@ while True:
     time.sleep(button_delay)
 #BUTTON B CODE
   if (buttons & cwiid.BTN_B):
-    clear()
+    turtle.clear()
     turtle.pendown()
     turtle.begin_fill()
     turtle.fillcolor('#FFFFFF')
