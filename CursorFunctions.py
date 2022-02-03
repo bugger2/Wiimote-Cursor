@@ -59,11 +59,11 @@ while True:
     time.sleep(button_delay)
 #BUTTON A CODE
   if (buttons & cwiid.BTN_A):
-    turtle.beginfill()
+    turtle.begin_fill()
     turtle.pencolor('#FFFFFF')
     turtle.fillcolor('#FFFFFF')
     turtle.circle(circle_width)
-    turtle.endfill()
+    turtle.end_fill()
     time.sleep(button_delay)
 #BUTTON B CODE
   if (buttons & cwiid.BTN_B):
