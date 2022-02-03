@@ -138,6 +138,31 @@ while True:
       color = 1
       time.sleep(button_delay)
   if (buttons & cwiid.BTN_B):
+    wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
+    roll=(wii.state['acc'][0])
+    pitch=(wii.state['acc'][1])
+    check = 0
+    while check == 0:
+      if (roll < -10):
+        turtle.setheading(0)
+        turtle.back(4)
+      if (roll > 10):
+        turtle.setheading(180)
+        turtle.forward(4)
+      if (pitch < -5):
+        turtle.setheading(90)
+        turtle.forward(4)
+      if (pitch > 10):
+        turtle.setheading(270)
+        turtle.back(4)
+    time.sleep(0.01)
+    check = (buttons & cwiid.BTN_HOME)
+    time.sleep(button_delay)
+
+  if (buttons & cwiid.BTN_HOME):
+    wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
+    turtle.goto(200,200)
+    time.sleep(button_delay)
     if (color == 1):
       turtle.pendown()
       turtle.fillcolor('#FFFFFF')
@@ -180,29 +205,5 @@ while True:
       turtle.circle(circle_width)
     if (color < 1 or color > 8):
       color = 1
-    wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
-    roll=(wii.state['acc'][0])
-    pitch=(wii.state['acc'][1])
-    check = 0
-    while check == 0:
-      if (roll < -10):
-        turtle.setheading(0)
-        turtle.back(4)
-      if (roll > 10):
-        turtle.setheading(180)
-        turtle.forward(4)
-      if (pitch < -5):
-        turtle.setheading(90)
-        turtle.forward(4)
-      if (pitch > 10):
-        turtle.setheading(270)
-        turtle.back(4)
-    time.sleep(0.01)
-    check = (buttons & cwiid.BTN_HOME)
-    time.sleep(button_delay)
-
-  if (buttons & cwiid.BTN_HOME):
-    wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
-    turtle.goto(200,200)
-    time.sleep(button_delay)
+    
 turtle.endfill()
