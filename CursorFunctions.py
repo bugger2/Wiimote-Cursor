@@ -79,13 +79,13 @@ while True:
     turtle.circle(circle_width)
     turtle.end_fill()
     wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
-    roll=(wii.state['acc'][0])
-    pitch=(wii.state['acc'][1])
+    roll=(wii.state['acc'][0]-120)
+    pitch=(wii.state['acc'][1]-125)
     check = 0
     while check == 0:
       if (roll < -10):
         turtle.setheading(0)
-        turtle.back(4)
+        turtle.forward(4)
       if (roll > 10):
         turtle.setheading(180)
         turtle.forward(4)
@@ -94,7 +94,7 @@ while True:
         turtle.forward(4)
       if (pitch > 10):
         turtle.setheading(270)
-        turtle.back(4)
+        turtle.forward(4)
     time.sleep(0.01)
     check = (buttons & cwiid.BTN_B)
     time.sleep(button_delay)
