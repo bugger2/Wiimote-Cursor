@@ -94,42 +94,42 @@ while True:
     time.sleep(button_delay)
 
   if (buttons & cwiid.BTN_A):
-    if (color == 1 and buttons & cwiid.BTN_A):
+    if (color == 1):
       turtle.pendown()
       turtle.fillcolor('#FFFFFF')
       turtle.pencolor('#FFFFFF')
       turtle.circle(circle_width)  
-    if (color == 2 and buttons & cwiid.BTN_A):
+    if (color == 2):
       turtle.pendown()
       turtle.fillcolor('#A020F0')
       turtle.pencolor('#A020F0')
       turtle.circle(circle_width)
-    if (color == 3 and buttons & cwiid.BTN_A):
+    if (color == 3):
       turtle.pendown()
       turtle.fillcolor('#0000FF')
       turtle.pencolor('#0000FF')
       turtle.circle(circle_width)
-    if (color == 4 and buttons & cwiid.BTN_A):
+    if (color == 4):
       turtle.pendown()
       turtle.fillcolor('#FF0000')
       turtle.pencolor('#FF0000')
       turtle.circle(circle_width)
-    if (color == 5 and buttons & cwiid.BTN_A):
+    if (color == 5):
       turtle.pendown()
       turtle.fillcolor('#00FF00')
       turtle.pencolor('#00FF00')
       turtle.circle(circle_width)
-    if (color == 6 and buttons & cwiid.BTN_A):
+    if (color == 6):
       turtle.pendown()
       turtle.fillcolor('#FFFF00')
       turtle.pencolor('#FFFF00')
       turtle.circle(circle_width)
-    if (color == 7 and buttons & cwiid.BTN_A):
+    if (color == 7):
       turtle.pendown()
       turtle.fillcolor('#FFA500')
       turtle.pencolor('#FFA500')
       turtle.circle(circle_width)
-    if (color == 8 and buttons & cwiid.BTN_A):
+    if (color == 8):
       turtle.pendown()
       turtle.fillcolor('#FFC0CB')
       turtle.pencolor('#FFC0CB')
@@ -138,6 +138,48 @@ while True:
       color = 1
       time.sleep(button_delay)
   if (buttons & cwiid.BTN_B):
+    if (color == 1):
+      turtle.pendown()
+      turtle.fillcolor('#FFFFFF')
+      turtle.pencolor('#FFFFFF')
+      turtle.circle(circle_width)  
+    if (color == 2):
+      turtle.pendown()
+      turtle.fillcolor('#A020F0')
+      turtle.pencolor('#A020F0')
+      turtle.circle(circle_width)
+    if (color == 3):
+      turtle.pendown()
+      turtle.fillcolor('#0000FF')
+      turtle.pencolor('#0000FF')
+      turtle.circle(circle_width)
+    if (color == 4):
+      turtle.pendown()
+      turtle.fillcolor('#FF0000')
+      turtle.pencolor('#FF0000')
+      turtle.circle(circle_width)
+    if (color == 5):
+      turtle.pendown()
+      turtle.fillcolor('#00FF00')
+      turtle.pencolor('#00FF00')
+      turtle.circle(circle_width)
+    if (color == 6):
+      turtle.pendown()
+      turtle.fillcolor('#FFFF00')
+      turtle.pencolor('#FFFF00')
+      turtle.circle(circle_width)
+    if (color == 7):
+      turtle.pendown()
+      turtle.fillcolor('#FFA500')
+      turtle.pencolor('#FFA500')
+      turtle.circle(circle_width)
+    if (color == 8):
+      turtle.pendown()
+      turtle.fillcolor('#FFC0CB')
+      turtle.pencolor('#FFC0CB')
+      turtle.circle(circle_width)
+    if (color < 1 or color > 8):
+      color = 1
     wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
     roll=(wii.state['acc'][0])
     pitch=(wii.state['acc'][1])
