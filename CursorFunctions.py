@@ -28,7 +28,7 @@ turtle.speed(0)
 turtle.begin_fill()
 turtle.goto(200,200)
 turtle.hideturtle()
-
+turtle.circle(circle_width)
 while True:
   buttons = wii.state['buttons']
   
@@ -40,14 +40,14 @@ while True:
     wii.rumble = 0
     exit(wii)
     
-  if (buttons & cwiid.BTN_A != True):
-    turtle.pendown()
-    turtle.begin_fill()
-    turtle.fillcolor('#FFFFFF')
-    turtle.pencolor('#FFFFFF')
-    turtle.circle(circle_width)
-    turtle.end_fill()
-    turtle.clear()
+ # if (buttons & cwiid.BTN_A != True):
+  #  turtle.pendown()
+   # turtle.begin_fill()
+    #turtle.fillcolor('#FFFFFF')
+#    turtle.pencolor('#FFFFFF')
+ #   turtle.circle(circle_width)
+  #  turtle.end_fill()
+   # turtle.clear()
 
   # The following code detects whether any of the Wiimotes buttons have been pressed and then prints a statement to the screen!
   if (buttons & cwiid.BTN_LEFT):
@@ -67,6 +67,13 @@ while True:
     time.sleep(button_delay)
 #BUTTON B CODE
   if (buttons & cwiid.BTN_B):
+    clear()
+    turtle.pendown()
+    turtle.begin_fill()
+    turtle.fillcolor('#FFFFFF')
+    turtle.pencolor('#FFFFFF')
+    turtle.circle(circle_width)
+    turtle.end_fill()
     wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
     roll=(wii.state['acc'][0])
     pitch=(wii.state['acc'][1])
