@@ -71,30 +71,30 @@ while True:
     time.sleep(button_delay)
 #BUTTON B CODE
   if (buttons & cwiid.BTN_B):
+    turtle.clear()
     turtle.pendown()
     turtle.begin_fill()
     turtle.fillcolor('#FFFFFF')
     turtle.pencolor('#FFFFFF')
     turtle.circle(circle_width)
     turtle.end_fill()
-    turtle.clear()
     wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
     roll=(wii.state['acc'][0]-120)
     pitch=(wii.state['acc'][1]-125)
     check = 0
     while check == 0:
-      if (roll < -10):
+      if (roll < 0):
         turtle.setheading(0)
-        turtle.forward(4)
-      if (roll > 10):
+        turtle.backward(roll/1.5)
+      if (roll > 0):
         turtle.setheading(180)
-        turtle.forward(4)
-      if (pitch < -5):
+        turtle.backward(roll/1.5)
+      if (pitch < 0):
         turtle.setheading(90)
-        turtle.forward(4)
-      if (pitch > 10):
+        turtle.forward(pitch/1.5)
+      if (pitch > 0):
         turtle.setheading(270)
-        turtle.forward(4)
+        turtle.forward(pitch/1.5)
       time.sleep(0.01)
       check = (buttons & cwiid.BTN_B)
     time.sleep(button_delay)
