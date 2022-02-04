@@ -80,7 +80,7 @@ while True:
     turtle.end_fill()
     wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
     roll=(wii.state['acc'][0]-120)
-    pitch=(wii.state['acc'][1]-125)
+    pitch=(wii.state['acc'][1]-121)
     check = 0
     while check == 0:
       if (roll < 0):
@@ -103,6 +103,11 @@ while True:
     turtle.penup()
     turtle.goto(200,200)
     turtle.pendown()
+    turtle.begin_fill()
+    turtle.pencolor('#FFFFFF')
+    turtle.fillcolor('#FFFFFF')
+    turtle.circle(circle_width)
+    turtle.end_fill()
     time.sleep(button_delay)
 
 turtle.endfill()
