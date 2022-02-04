@@ -1,8 +1,4 @@
-# This program utilises the cwiid Python library in order to get input over bluetooth from a wiimote.
-# The following lines of code demonstrate many of the features realted to wiimotes, such as capturing button presses and rumbling the controller.
-# I have managed to map the home button to the accelerometer - simply hold it and values will appear!
-
-# Coded by The Raspberry Pi Guy. Work based on some of Matt Hawkins's!
+# Coded by SpicyMileHigh, script based off of that of The Raspberry Pi Guy's.
 import cwiid, time, turtle, matplotlib
 matplotlib.use('Agg')
 button_delay = 0.1
@@ -17,7 +13,7 @@ except:
   quit()
 circle_width = 5
 print("Connection established. Feel free to draw.")
-
+#I honestly have no idea what this does and am too scared to remove it. Came from The Raspberry Pi Guys code.
 wii.rpt_mode = cwiid.RPT_BTN
 
 #All turtle preamble
@@ -33,6 +29,7 @@ turtle.begin_fill()
 turtle.pencolor('#FFFFFF')
 turtle.fillcolor('#FFFFFF')
 turtle.circle(circle_width)
+#Stuff to do with buttons
 while True:
   buttons = wii.state['buttons']
 
@@ -44,24 +41,7 @@ while True:
     wii.rumble = 0
     exit(wii)
 
- # if (buttons & cwiid.BTN_A != True):
-  #  turtle.pendown()
-   # turtle.begin_fill()
-    #turtle.fillcolor('#FFFFFF')
-#    turtle.pencolor('#FFFFFF')
- #   turtle.circle(circle_width)
-  #  turtle.end_fill()
-   # turtle.clear()
-
-  # The following code detects whether any of the Wiimotes buttons have been pressed and then prints a statement to the screen!
-  if (buttons & cwiid.BTN_LEFT):
-    color = color + 1
-    time.sleep(button_delay)
-
-  if(buttons & cwiid.BTN_RIGHT):
-    color = color + 1
-    time.sleep(button_delay)
-#BUTTON A CODE
+#Draws
   if (buttons & cwiid.BTN_A):
     turtle.begin_fill()
     turtle.pencolor('#FFFFFF')
@@ -69,7 +49,7 @@ while True:
     turtle.circle(circle_width)
     turtle.end_fill()
     time.sleep(button_delay)
-#BUTTON B CODE
+#Moves the cursor
   if (buttons & cwiid.BTN_B):
     turtle.clear()
     turtle.pendown()
@@ -85,20 +65,20 @@ while True:
     while check == 0:
       if (roll < 0):
         turtle.setheading(0)
-        turtle.backward(roll/1.5)
+        turtle.backward(6)
       if (roll > 0):
         turtle.setheading(180)
-        turtle.backward(roll/1.5)
+        turtle.backward(6)
       if (pitch < 0):
         turtle.setheading(90)
-        turtle.forward(pitch/1.5)
+        turtle.forward(6)
       if (pitch > 0):
         turtle.setheading(270)
-        turtle.forward(pitch/1.5)
+        turtle.forward(6)
       time.sleep(0.01)
       check = (buttons & cwiid.BTN_B)
     time.sleep(button_delay)
-
+#sets the cursor to center of screen
   if (buttons & cwiid.BTN_HOME):
     turtle.penup()
     turtle.goto(200,200)
@@ -108,6 +88,7 @@ while True:
     turtle.fillcolor('#FFFFFF')
     turtle.circle(circle_width)
     turtle.end_fill()
+    turtle.clear()
     time.sleep(button_delay)
 
 turtle.endfill()
