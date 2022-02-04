@@ -65,13 +65,13 @@ while True:
     while check == 0:
       if (roll < 0):
         turtle.setheading(0)
-        turtle.backward(roll)
+        turtle.forward(roll)
       if (roll > 0):
         turtle.setheading(180)
         turtle.backward(roll)
       if (pitch < 0):
         turtle.setheading(90)
-        turtle.forward(pitch)
+        turtle.backward(pitch)
       if (pitch > 0):
         turtle.setheading(270)
         turtle.forward(pitch)
