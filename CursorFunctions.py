@@ -66,22 +66,22 @@ while True:
       if (roll < 0):
         turtle.setheading(0)
         turtle.penup()
-        turtle.forward(roll)
+        turtle.forward(roll*2)
         turtle.pendown()
       if (roll > 0):
         turtle.setheading(180)
         turtle.penup()
-        turtle.backward(roll)
+        turtle.backward(roll*2)
         turtle.pendown()
       if (pitch < 0):
         turtle.setheading(90)
         turtle.penup()
-        turtle.backward(pitch)
+        turtle.backward(pitch*2)
         turtle.pendown()
       if (pitch > 0):
         turtle.setheading(270)
         turtle.penup()
-        turtle.forward(pitch)
+        turtle.forward(pitch*2)
         turtle.pendown()
       time.sleep(0.01)
       check = (buttons & cwiid.BTN_B)
