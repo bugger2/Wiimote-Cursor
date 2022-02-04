@@ -95,12 +95,14 @@ while True:
       if (pitch > 10):
         turtle.setheading(270)
         turtle.forward(4)
-    time.sleep(button_delay)
-    check = (buttons & cwiid.BTN_B)
+      time.sleep(0.01)
+      check = (buttons & cwiid.BTN_B)
     time.sleep(button_delay)
 
   if (buttons & cwiid.BTN_HOME):
+    turtle.penup()
     turtle.goto(200,200)
+    turtle.pendown()
     time.sleep(button_delay)
 
 turtle.endfill()
