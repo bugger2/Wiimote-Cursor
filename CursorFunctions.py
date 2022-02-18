@@ -4,7 +4,7 @@ matplotlib.use('Agg')
 button_delay = 0.1
 color = 1
 time.sleep(1)
-
+bClearing = true
 # This code attempts to connect to your Wiimote and if it fails the program quits
 try:
   print("Please Press the 1 and 2 Buttons on Your Wiimote to Connect")
@@ -69,14 +69,20 @@ while True:
     time.sleep(1)
     wii.rumble = 0
     exit(wii)
-
+  if (buttons & cwiid.BTN_MINUS):
+    bClearing = false
+  if (buttons & cwiid.BTN_PLUS):
+    bClearing = true
 #Draws
   if (buttons & cwiid.BTN_A):
     movement(cwiid.BTN_A)
 #Moves the cursor
   if (buttons & cwiid.BTN_B):
-    turtle.clear()
-    movement(cwiid.BTN_B)
+    if (bClearing = true):
+      turtle.clear()
+      movement(cwiid.BTN_B)
+    elif (bClearing = false):
+      movement(cwiid.BTN_B)
 #sets the cursor to center of screen
   if (buttons & cwiid.BTN_HOME):
     turtle.penup()
