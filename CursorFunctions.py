@@ -70,9 +70,9 @@ while True:
     wii.rumble = 0
     exit(wii)
   if (buttons & cwiid.BTN_MINUS):
-    bClearing == False
+    bClearing = False
   if (buttons & cwiid.BTN_PLUS):
-    bClearing == True
+    bClearing = True
 #Draws
   if (buttons & cwiid.BTN_A):
     movement(cwiid.BTN_A)
