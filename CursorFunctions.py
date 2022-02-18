@@ -71,26 +71,26 @@ turtle.endfill()
 
 def movement():
   turtle.pendown()
-    turtle.begin_fill()
-    turtle.fillcolor('#FFFFFF')
-    turtle.pencolor('#FFFFFF')
-    turtle.circle(circle_width)
-    turtle.end_fill()
-    wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
-    roll=(wii.state['acc'][0]-120)
-    pitch=(wii.state['acc'][1]-121)
-    check = 0
-    while check == 0:
-      if (roll != 0):
-        turtle.setheading(0)
-        turtle.penup()
-        turtle.forward(roll*2)
-        turtle.pendown()
-      if (pitch != 0):
-        turtle.setheading(90)
-        turtle.penup()
-        turtle.backward(pitch*2)
-        turtle.pendown()
-      time.sleep(0.01)
-      check = (buttons & cwiid.BTN_B)
-    time.sleep(button_delay)
+  turtle.begin_fill()
+  turtle.fillcolor('#FFFFFF')
+  turtle.pencolor('#FFFFFF')
+  turtle.circle(circle_width)
+  turtle.end_fill()
+  wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
+  roll=(wii.state['acc'][0]-120)
+  pitch=(wii.state['acc'][1]-121)
+  check = 0
+  while check == 0:
+    if (roll != 0):
+      turtle.setheading(0)
+      turtle.penup()
+      turtle.forward(roll*2)
+      turtle.pendown()
+    if (pitch != 0):
+      turtle.setheading(90)
+      turtle.penup()
+      turtle.backward(pitch*2)
+      turtle.pendown()
+    time.sleep(0.01)
+    check = (buttons & cwiid.BTN_B)
+  time.sleep(button_delay)
