@@ -78,10 +78,10 @@ while True:
     movement(cwiid.BTN_A)
 #Moves the cursor
   if (buttons & cwiid.BTN_B):
-    if (bClearing = true):
+    if (bClearing == true):
       turtle.clear()
       movement(cwiid.BTN_B)
-    elif (bClearing = false):
+    elif (bClearing == false):
       movement(cwiid.BTN_B)
 #sets the cursor to center of screen
   if (buttons & cwiid.BTN_HOME):
