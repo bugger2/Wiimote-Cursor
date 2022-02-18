@@ -42,7 +42,7 @@ def movement(button):
   wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
   roll=(wii.state['acc'][0]-120)
   pitch=(wii.state['acc'][1]-121)
-  check = button
+  check = 0
   while check == 0:
     if (roll != 0):
       turtle.setheading(0)
@@ -55,7 +55,7 @@ def movement(button):
       turtle.backward(pitch*2)
       turtle.pendown()
     time.sleep(0.01)
-    check = (buttons & cwiid.BTN_B)
+    check = (buttons & button)
   time.sleep(button_delay)
   
 #Stuff to do with buttons
