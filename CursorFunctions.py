@@ -72,12 +72,7 @@ while True:
 
 #Draws
   if (buttons & cwiid.BTN_A):
-    turtle.begin_fill()
-    turtle.pencolor('#FFFFFF')
-    turtle.fillcolor('#FFFFFF')
     movement()
-    turtle.end_fill()
-    time.sleep(button_delay)
 #Moves the cursor
   if (buttons & cwiid.BTN_B):
     turtle.clear()
