@@ -32,7 +32,7 @@ turtle.fillcolor('#FFFFFF')
 turtle.circle(circle_width)
 
 #Cursor Movement function
-def movement():
+def movement(button):
   turtle.pendown()
   turtle.begin_fill()
   turtle.fillcolor('#FFFFFF')
@@ -42,7 +42,7 @@ def movement():
   wii.rpt_mode = cwiid.RPT_BTN | cwiid.RPT_ACC
   roll=(wii.state['acc'][0]-120)
   pitch=(wii.state['acc'][1]-121)
-  check = 0
+  check = button
   while check == 0:
     if (roll != 0):
       turtle.setheading(0)
@@ -72,11 +72,11 @@ while True:
 
 #Draws
   if (buttons & cwiid.BTN_A):
-    movement()
+    movement(cwiid.BTN_A)
 #Moves the cursor
   if (buttons & cwiid.BTN_B):
     turtle.clear()
-    movement()
+    movement(cwiid.BTN_B)
 #sets the cursor to center of screen
   if (buttons & cwiid.BTN_HOME):
     turtle.penup()
