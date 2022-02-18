@@ -75,7 +75,7 @@ while True:
     turtle.begin_fill()
     turtle.pencolor('#FFFFFF')
     turtle.fillcolor('#FFFFFF')
-    turtle.circle(circle_width)
+    movement()
     turtle.end_fill()
     time.sleep(button_delay)
 #Moves the cursor
